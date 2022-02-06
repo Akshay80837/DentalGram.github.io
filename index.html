@@ -54,9 +54,6 @@
     margin: 10px;
   }
 
-  .video{
-    margin-top:5rem;
-  }
   .img-size{
     width: 5rem;
     height: 5rem;
@@ -86,6 +83,11 @@
 
       .video{
         height: 2px;
+      }
+
+      .r-v{
+      font-size: 20px;
+
       }
 }
 
@@ -174,215 +176,243 @@
 
     <!-- F&V -->
 
-    <section class="container-fluid ">
-    <div class="row">
-      <div class="col-sm-4 col-md-4 col-lg-4 col-12" style="background-image: url('images/BlueBackground.png');">
-        <form class="frm-size" id="regForm" action="/action_page.php">
-  <h1 class="text-center p-5 ">Are You Patient</h1>
-  <!-- One "tab" for each step in the form: -->
-  <div class="tab"><div class="row">
-                                        <div class="col-lg-12">
-                                            <div class="mb-1" >
-                                                <label class="form-label  margin_bootom_0">Patient Name <span class="text-danger">*</span></label>
-                                                <input name="name" id="name" type="text" class="form-control transparent c-p-5" placeholder="Name">
-                                                <span class="rating-error" id="name-errors"></span>
-                                            </div>
-                                        </div>
-                                        <!--end col-->
+    <section class=" container-fluid">
+    <div class="row bg-dark">
+      <div class="col-sm-4 col-md-4 col-lg-4 bg-info" style="background-image: url('images/BlueBackground.png');">
+        <form id="regForm" action="#" class="m-5">
+          <h1 class="text-center text-capitalize p-3 fw-bold">are you patient ?</h1>
+          <!-- One "tab" for each step in the form: -->
+          <!-- step 1 from -->
+          <div class="tab">
+            <div class="row">
+              <div class="col-lg-12">
+                      <div class="mb-1">
+                          <label class="form-label  margin_bootom_0">Patient Name <span class="text-danger">*</span></label>
+                          <input name="name" id="name" type="text" class="form-control p-3" placeholder="Name">
+                          <span class="rating-error" id="name-errors"></span>
+                      </div>
+                  </div><!--end col-->
 
-                                        <div class="col-lg-6">
-                                            <div class="mb-1">
-                                                <label class="form-label  margin_bootom_0">Your Email <span class="text-danger">*</span></label>
-                                                <input name="email" id="email" type="email" class="form-control transparent c-p-5" placeholder="Email">
-                                            </div> 
-                                        </div><!--end col-->
+                  <div class="col-lg-6">
+                      <div class="mb-1">
+                          <label class="form-label  margin_bootom_0">Your Email <span class="text-danger">*</span></label>
+                          <input name="email" id="email" type="email" class="form-control p-3" placeholder="Email">
+                      </div> 
+                  </div><!--end col-->
 
-                                        <div class="col-lg-6">
-                                            <div class="mb-1">
-                                                <label class="form-label margin_bootom_0 ">Your Phone <span class="text-danger">*</span></label>
-                                                <input name="phone" id="phone" type="tel" class="form-control transparent c-p-5" placeholder="Phone">
-                                            </div> 
-                                        </div><!--end col-->
+                  <!--end col-->
 
-                                        <div class="col-lg-6">
-                                            <div class="mb-1">
-                                                <label class="form-label margin_bootom_0 ">Address <span class="text-danger">*</span></label>
-                                                <input name="address" id="address" type="text" class="form-control transparent c-p-5" placeholder="Address">
-                                            </div> 
-                                        </div><!--end col-->
-                                        <div class="col-lg-6">
-                                            <div class="mb-1">
-                                                <label class="form-label margin_bootom_0 ">Unit Number</label>
-                                                <input name="unit_no" id="unit_no" type="text" class="form-control transparent c-p-5" placeholder="UnitNo">
-                                            </div> 
-                                        </div>
-</div>
-  </div>
-  <div class="tab">
-    <div class="row">
+                  <div class="col-lg-6">
+                      <div class="mb-1">
+                          <label class="form-label margin_bootom_0 ">Country <span class="text-danger">*</span></label>
+                          <input name="country" id="country" type="tel" class="form-control p-3" placeholder="Country">
+                      </div> 
+                  </div>
+                  <div class="col-lg-6">
+                      <div class="mb-1">
+                          <label class="form-label margin_bootom_0 ">Zipcode <span class="text-danger">*</span></label>
+                          <input name="zipcode" id="zipcode" type="text" class="form-control p-3" placeholder="Zipcode">
+                      </div> 
+                  </div>
+            </div>
+          </div>
 
-                                        <div class="col-lg-6">
-                                            <div class="mb-1">
-                                                <label class="form-label margin_bootom_0 ">City <span class="text-danger">*</span></label>
-                                                <input name="city" id="city" type="tel" class="form-control transparent c-p-5" placeholder="City">
-                                            </div> 
-                                        </div>
-                                        
-    </div>
-  </div>
-  <div class="tab">
-    <div class="row">
-          <div class="col-lg-12">
-                                            <div class="mb-1">
-                                                <label class="form-label margin_bootom_0">Do you have dental insurance? </label>
-                                                <select class="col-lg-8 form-control transparent c-p-5"  name='insurance' id='insurance'  >
-                                                    <option value="">Please select</option>
-                                                    <option value="Yes - I have Insuracne">Yes - I have insurance </option>
-                                                    <option value="No - I don't have insurance">No - I don't have insurance</option>
-                                                </select>
-                                                <p style="font-size:10px;">Why do we ask? We want connect you with a dentist who accepts your plan!</p>
-                                              </div> 
-                                        </div>
+          <div class="tab">
+           <div class="row">
+               <div class="col-lg-12">
+                      <div class="mb-1">
+                          <label class="form-label margin_bootom_0 ">Query <span class="text-danger">*</span></label>
+                          <textarea name="description" id="description" rows="1" class="form-control p-3" placeholder="Write your query here...."></textarea>
+                      </div>
+                  </div><!--end col-->
 
-                                        <div class="col-lg-12">
-                                        
-                                            <div class="mb-1">
-                                                <label class="form-label margin_bootom_0">Please identify the type of procedure(s) you are interested in. (if unsure, leave blank) </label>
+                 
 
-                                                <div class="row" style="margin-left: 0px;font-size:12px;">
-                                                    <div class="form-check col-lg-4">
-                                                        <input name='interested_procedure[]' class="form-check-input" type="checkbox" value="Root Canal" id="flexCheckDefault1">
-                                                        <label class="form-check-label" for="flexCheckDefault">Root Canal</label>
-                                                    </div>
-                                                    <div class="form-check col-lg-4">
-                                                        <input name='interested_procedure[]' class="form-check-input" type="checkbox" value="Teeth Whitening" id="flexCheckChecked2" >
-                                                        <label class="form-check-label" for="flexCheckChecked">Teeth Whitening</label>
-                                                    </div>  
-                                                    <div class="form-check col-lg-4">
-                                                        <input name='interested_procedure[]' class="form-check-input" type="checkbox" value="Snap on Dentures" id="flexCheckChecked4" >
-                                                        <label class="form-check-label" for="flexCheckChecked">Snap on Dentures</label>
-                                                    </div>
-                                                                                             
-                                                    
-                                                    
-                                                   
-                                                    <div class="form-check col-lg-4">
-                                                        <input name='interested_procedure[]' class="form-check-input" type="checkbox" value="Bridge/Crown" id="flexCheckChecked5" >
-                                                        <label class="form-check-label" for="flexCheckChecked">Bridge/Crown</label>
-                                                    </div>
-                                                    <div class="form-check col-lg-4">
-                                                        <input name='interested_procedure[]' class="form-check-input" type="checkbox" value="Implants(s)" id="flexCheckChecked6" >
-                                                        <label class="form-check-label" for="flexCheckChecked"> Implants(s)</label>
-                                                    </div>
-                                                    
-                                                   
-                                                    <div class="form-check col-lg-4">
-                                                        <input name='interested_procedure[]' class="form-check-input" type="checkbox" value="Braces (Metal)" id="flexCheckChecked9" >
-                                                        <label class="form-check-label" for="flexCheckChecked">Braces (Metal) </label>
-                                                    </div>
-                                                    
-                                                    <div class="form-check col-lg-4">
-                                                        <input name='interested_procedure[]' class="form-check-input" type="checkbox" value="Dental Extractions" id="flexCheckChecked11" >
-                                                        <label class="form-check-label" for="flexCheckChecked">Dental Extractions</label>
-                                                    </div>
-                                                  
-                                                    <div class="form-check col-lg-4">
-                                                        <input name='interested_procedure[]' class="form-check-input" type="checkbox" value="Veneers" id="flexCheckChecked10" >
-                                                        <label class="form-check-label" for="flexCheckChecked">Veneers </label>
-                                                    </div> 
-                                                    
-                                                    <div class="form-check col-lg-4">
-                                                        <input name='interested_procedure[]' class="form-check-input" type="checkbox" value="Other" id="flexCheckChecked12" >
-                                                        <label class="form-check-label" for="flexCheckChecked">Other </label>
-                                                    </div>
-                                                    
-                                                    <div class="form-check col-lg-5">
-                                                        <input name='interested_procedure[]' class="form-check-input" type="checkbox" value="Removable Dentures" id="flexCheckChecked8" >
-                                                        <label class="form-check-label" for="flexCheckChecked">Removable Dentures</label>
-                                                    </div>
-                                                    <div class="form-check col-lg-6">
-                                                    <input name='interested_procedure[]' class="form-check-input" type="checkbox" value="Clear Aligners (Invisalign)" id="flexCheckChecked3" >
-                                                        <label class="form-check-label" for="flexCheckChecked">Clear Aligners (Invisalign)</label>
-                                                    </div>
-                                                    
-                                                    
-                                               
-                                                </div>
-                                            </div> 
-                                        </div>
+                  <div class="col-lg-12">
+                      <div class="mb-1">
+                          <label class="form-label margin_bootom_0">When was your last visit to the dentist? </label>
+                          <select class="col-lg-8 form-control p-3" name="last_visit" id="last_visit">
+                              <option value="">Please select</option>
+                              <option value="< 1 Year">&lt; 1 Year</option>
+                              <option value="1-2 Years">1-2 Years</option>
+                              <option value="2+ Years">2+ Years</option>
+                              <option value="I've never visited">I've never visited</option>
+                          </select>
+                          <p style="font-size:10px;">This question helps us determine your appointment length.</p>
+                        </div> 
+                  </div>
+
+                  <div class="col-lg-12">
+                      <div class="mb-1">
+                          <label class="form-label margin_bootom_0">How soon would you like to visit the dentist? </label>
+                          <select class="col-lg-8 form-control p-3" name="coming_visit" id="coming_visit">
+                              <option value="">Please select</option>
+                              <option value="Within 1 week">Within 1 week</option>
+                              <option value="Within 2 weeks">Within 2 weeks</option>
+                              <option value="In more then 2 weeks ">In more than 2 weeks </option>
+                          </select>
+                          <p style="font-size:10px;">We'll try to connect you with a dentist who has appointments in your time range.</p>
+                        </div> 
+                  </div>
+                
+                  
+                  <div class="col-lg-12">
+                      <div class="mb-1">
+                          <label class="form-label margin_bootom_0">Do you have dental insurance? </label>
+                          <select class="col-lg-8 form-control p-3" name="insurance" id="insurance">
+                              <option value="">Please select</option>
+                              <option value="Yes - I have Insuracne">Yes - I have insurance </option>
+                              <option value="No - I don't have insurance">No - I don't have insurance</option>
+                          </select>
+                          <p style="font-size:10px;">Why do we ask? We want connect you with a dentist who accepts your plan!</p>
+                        </div> 
+                  </div>
+           </div>
+          </div>
+
+          <div class="tab">
+            <div class="row">
+              <div class="col-lg-12">
+                      <div class="mb-1">
+                          <label class="form-label margin_bootom_0">Please identify the type of procedure(s) you are interested in. (if unsure, leave blank) </label>
+
+                          <div class="row" style="margin-left: 0px;font-size:12px;">
+                              <div class="form-check col-lg-4">
+                                  <input name="interested_procedure[]" class="form-check-input" type="checkbox" value="Root Canal" id="flexCheckDefault1">
+                                  <label class="form-check-label" for="flexCheckDefault">Root Canal</label>
+                              </div>
+                              <div class="form-check col-lg-4">
+                                  <input name="interested_procedure[]" class="form-check-input" type="checkbox" value="Teeth Whitening" id="flexCheckChecked2">
+                                  <label class="form-check-label" for="flexCheckChecked">Teeth Whitening</label>
+                              </div>  
+                              <div class="form-check col-lg-4">
+                                  <input name="interested_procedure[]" class="form-check-input" type="checkbox" value="Snap on Dentures" id="flexCheckChecked4">
+                                  <label class="form-check-label" for="flexCheckChecked">Snap on Dentures</label>
+                              </div>
+                            
+                             
+                              <div class="form-check col-lg-4">
+                                  <input name="interested_procedure[]" class="form-check-input" type="checkbox" value="Bridge/Crown" id="flexCheckChecked5">
+                                  <label class="form-check-label" for="flexCheckChecked">Bridge/Crown</label>
+                              </div>
+                              <div class="form-check col-lg-4">
+                                  <input name="interested_procedure[]" class="form-check-input" type="checkbox" value="Implants(s)" id="flexCheckChecked6">
+                                  <label class="form-check-label" for="flexCheckChecked"> Implants(s)</label>
+                              </div>
+                              
+                             
+                              <div class="form-check col-lg-4">
+                                  <input name="interested_procedure[]" class="form-check-input" type="checkbox" value="Braces (Metal)" id="flexCheckChecked9">
+                                  <label class="form-check-label" for="flexCheckChecked">Braces (Metal) </label>
+                              </div>
+                              
+                              <div class="form-check col-lg-4">
+                                  <input name="interested_procedure[]" class="form-check-input" type="checkbox" value="Dental Extractions" id="flexCheckChecked11">
+                                  <label class="form-check-label" for="flexCheckChecked">Dental Extractions</label>
+                              </div>
+                            
+                              <div class="form-check col-lg-4">
+                                  <input name="interested_procedure[]" class="form-check-input" type="checkbox" value="Veneers" id="flexCheckChecked10">
+                                  <label class="form-check-label" for="flexCheckChecked">Veneers </label>
+                              </div> 
+                              
+                              <div class="form-check col-lg-4">
+                                  <input name="interested_procedure[]" class="form-check-input" type="checkbox" value="Other" id="flexCheckChecked12">
+                                  <label class="form-check-label" for="flexCheckChecked">Other </label>
+                              </div>
+                              
+                              <div class="form-check col-lg-5">
+                                  <input name="interested_procedure[]" class="form-check-input" type="checkbox" value="Removable Dentures" id="flexCheckChecked8">
+                                  <label class="form-check-label" for="flexCheckChecked">Removable Dentures</label>
+                              </div>
+                              <div class="form-check col-lg-6">
+                              <input name="interested_procedure[]" class="form-check-input" type="checkbox" value="Clear Aligners (Invisalign)" id="flexCheckChecked3">
+                                  <label class="form-check-label" for="flexCheckChecked">Clear Aligners (Invisalign)</label>
+                              </div>
+                              
+                          </div>
+                      </div> 
+                  </div>
+            </div>
+          </div>
+
+        <div class="tab">employeed:
+          <div class="row">
+            <div class="col-lg-12">
+                      <div class="mb-1">
+                          <label class="form-label margin_bootom_0">Are you presently employed? </label>
+                          <select class="col-lg-8 form-control p-3" name="presently_employed" id="presently_employed">
+                              <option value="">Please select</option>
+                              <option value="Employed">Employed</option>                                                    
+                              <option value="Retired / Senior">Retired / Senior</option>
+                              <option value="Unemployed / Dependent">Unemployed / Dependent</option>
+                              <option value="Student">Student</option>
+                          </select>
+                        </div> 
+                  </div>
 
 
-                                        <div class="col-lg-12">
-                                            <div class="mb-1">
-                                                <label class="form-label margin_bootom_0">Are you presently employed? </label>
-                                                <select  class="col-lg-8 form-control transparent c-p-5"  name='presently_employed' id='presently_employed'  >
-                                                    <option value="">Please select</option>
-                                                    <option value="Employed">Employed</option>                                                    
-                                                    <option value="Retired / Senior">Retired / Senior</option>
-                                                    <option value="Unemployed / Dependent">Unemployed / Dependent</option>
-                                                    <option value="Student">Student</option>
-                                                </select>
-                                              </div> 
-                                    </div>
+                  <div class="col-lg-12">
+                      <div class="mb-1">
+                          <label class="form-label margin_bootom_0">How did you hear about us? </label>
+                          <select class="col-lg-8 form-control p-3" name="hear_about_us" id="hear_about_us">
+                              <option value="">Please select</option>
+                              <option value="Google">Google</option>                                                    
+                              <option value="Social Media">Social Media</option>
+                              <option value="Radio">Radio</option>
+                              <option value="Referral">Referral</option>
+                              <option value="Others">Others</option>
+                          </select>
+                        </div> 
+                  </div>
 
-    </div>
-  </div>
-  <div class="tab">
-    <div class="row">
-      <div class="col-lg-12">
-                                            <div class="mb-1">
-                                                <label class="form-label margin_bootom_0">How did you hear about us? </label>
-                                                <select  class="col-lg-8 form-control transparent c-p-5"  name='hear_about_us' id='hear_about_us'  >
-                                                    <option value="">Please select</option>
-                                                    <option value="Google">Google</option>                                                    
-                                                    <option value="Social Media">Social Media</option>
-                                                    <option value="Radio">Radio</option>
-                                                    <option value="Referral">Referral</option>
-                                                    <option value="Others">Others</option>
-                                                </select>
-                                              </div> 
-                                        </div>
+                  <br>
+                  <div class="col-12" style="margin-top:10px;">
+                  <p style="font-size:11px;"><input value="Yes" type="checkbox" name="send_email_permission" id="send_email_permission"> 
+                  By checking this box you agree with the <a style="color:#fff;font-weight:bold;text-decoration:underline!important;font-size:13px;" target="_blank" href="https://www.dentalgram.ca/Terms"><span>Terms and Conditions</span></a> and consent to the 
+                  secure collection, use and disclosure of your personal information as described in our 
+                  <a style="color:#fff;font-weight:bold;text-decoration:underline!important;font-size:13px;" target="_blank" href="https://www.dentalgram.ca/Privacy"><span>Privacy Policy</span></a>
+                  </p></div>
+                  
+              </div><!--end row-->
+              
+              <input type="hidden" id="latitude" name="latitude" value="">
+              <input type="hidden" name="longitude" id="longitude" value="">
+          </div>
 
-                                        </br>
-                                        <div class="col-12" style="margin-top:10px;">
-                                        <p style="font-size:11px;"><input value="Yes" type="checkbox" name="send_email_permission" id="send_email_permission"> 
-                                        By checking this box you agree with the <a  style="color:#fff;font-weight:bold;text-decoration:underline!important;font-size:13px;" target="_blank" href="https://www.dentalgram.ca/Terms"><span>Terms and Conditions</span></a> and consent to the 
-                                        secure collection, use and disclosure of your personal information as described in our 
-                                        <a style="color:#fff;font-weight:bold;text-decoration:underline!important;font-size:13px;" target="_blank" href="https://www.dentalgram.ca/Privacy"><span>Privacy Policy</span></a>  
-                                           
-                                        </div>   
-                                        <!--<div class="col-12">
-                                            <p><input value="Yes" type="checkbox"  name="send_email_permission2" id="send_email_permission2"><span>&nbsp;Send emails for further communication</span> </p>
-                                        </div>  -->
-                                        <div class="col-lg-12 ">
-                                            <div class="d-grid float-lg-right">
-                                                <button type="submit" id="query-submit" onmouseover="return initMap();" class="btn btn-primary w-100 " style="color:rgb(90,189,231);font-weight: bold; opacity: 1;">Submit Your Query</button>
-                                            </div>
-                                        </div><!--end col-->
-    </div>
-  </div>
-  <div style="overflow:auto;">
-    <div style="float:right;">
-      <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
-      <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
-    </div>
-  </div>
-  <!-- Circles which indicates the steps of the form: -->
-  <!-- <div style="text-align:center;margin-top:40px;">
-    <span class="step"></span>
-    <span class="step"></span>
-    <span class="step"></span>
-    <span class="step"></span>
-  </div> -->
-</form>
- </div>  
-      <div class="col-sm-8 col-md-8 col-lg-8 col-8">
-        <video class="video-fluid h-100 w-100 video" autoplay loop controls muted>
-                    <source src="video/video-bg.mp4" type="video/mp4" />
-                  </video>
+          <div class="py-3">
+            <div class="py-2 mb-5" style="float:right;">
+              <button type="button" class="btn-next" id="prevBtn" onclick="nextPrev(-1)" style=" border-radius: 15px;">Previous</button>
+              <button type="button" class="btn-prev" id="nextBtn" onclick="nextPrev(1)" style=" border-radius: 15px;">Next</button>
+            </div>
+          </div>
+          <!-- Circles which indicates the steps of the form: -->
+          <div style="text-align:center;margin-top:40px;">
+            <span class="step"></span>
+            <span class="step"></span>
+            <span class="step"></span>
+            <span class="step"></span>
+          </div>
+        </form>   
+      </div>  
+      <div class="col-sm-8 col-md-8 col-lg-8 text-center" style="position: relative;">
+          <div class="">
+              <video class="video-fluid w-100 h-100" autoplay loop controls muted style="pointer-events: none;">
+                <source src="video/video-bg.mp4" type="video/mp4">
+              </video>
+          </div>
+
+          <!-- <div class="text-light w-100" style="position: absolute; top: 2rem; left: 0rem;">
+            <h1 class="text-center text-uppercase display-4 fw-bold hire" style="padding: 0rem 7.5rem;">hire temp for your dental offices</h1>
+          </div>
+ -->
+          <!-- <div class="text-light" style="position: absolute; bottom: 1rem;">
+            <h1 class="text-center text-uppercase fw-bold solution">we provide solution to post temporary josb to full the requrirements of your dental office</h1>
+          </div> -->
       </div>    
     </div>
 </section>
+
 <style type="text/css">
   /* Mark input boxes that gets an error on validation: */
     input.invalid {
@@ -889,11 +919,11 @@ function fixStepIndicator(n) {
     <!-- copy right -->
     
   </div>
-  <div class="bg-info d-flex justify-content-between p-2 px-5">
-      <div class="p-2 fw-bold">
+  <div class=" r-v bg-info d-flex justify-content-between p-2 px-5">
+      <div class="p-2 r-v fw-bold">
         <p>2022 #dentalGram.Inc. All Rights reserved</p>
       </div>
-      <div class="p-2 fw-bold">
+      <div class="p-2 r-v fw-bold">
         <p>terms & conditions | private policy | about us</p>
       </div>
     </div>
