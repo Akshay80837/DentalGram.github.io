@@ -1,0 +1,916 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>DentalGram</title>
+    <style type="text/css">
+
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    .book-appoinment{
+      background-image: url('images/RoundedRectangle9.png');
+      background-size: 100% 100%;
+    }
+    .login{
+      background-image: url('images/RoundedRectangle15.png');
+      background-size: 100% 100%;
+    }
+    .login,.book-appoinment{
+      border-radius: 20px;
+      font-size: 17px;
+    }
+    button{
+      outline-style: none;
+      border: none;
+    }
+    .nav-item{
+      font-size: 20px;
+    }
+    li{
+      padding-left: 10px;
+    }
+    .play-store-img{
+      width: 9rem;
+      margin: .4rem;
+    }
+
+ 
+     /*Responsive*/
+
+
+@media screen and (max-width: 400px) {
+  .mob-view{
+    border: solid #7BEFEE;
+    border-radius: 20px;
+    margin: 10px;
+  }
+
+  .video{
+    margin-top:5rem;
+  }
+  .img-size{
+    width: 5rem;
+    height: 5rem;
+      }
+
+      .frm-size{
+    
+
+      }
+
+      .icon-size{
+      
+  
+    display: none;
+      }
+
+      .font-s{
+        text-align: center;
+      }
+
+      .mob-v{
+        /*align-items: center;
+        background-color: red;
+        width: 6px;
+        height: 5px;*/
+      }
+
+      .video{
+        height: 2px;
+      }
+}
+
+
+  </style>
+</head>
+<body>
+  <!-- nav bar  start -->
+  <section class="container-fluid">
+    <div class="row">
+      <div class="col-sm-8 col-md-8 col-lg-8 pt-4">
+        <!-- column started -->
+        <div>
+          <!-- logo -->
+          <img src="images/MainLogo.png" class="img-fluid px-5" style="height:6rem">
+        </div>
+      </div>
+      <!-- end column -->
+      <div class="col-sm-4 col-md-4 col-lg-4 justify-content-end pt-4 ">
+        <div class="d-flex justify-content-end">
+          
+          <li class="nav-item dropdown d-flex">
+            <button class="book-appoinment px-3 py- mx-2 text-light fw-bold">Book an Appoinment</button>
+            <button class="login px-3 py-2 mx-2 text-light fw-bold nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><span>login</span><img src="images/layer_163.png" class="px-2"></button>
+
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li>
+                    <a class="dropdown-item" href="#">Temps</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Dental office</a>
+                  </li>
+          
+                </ul>
+              </li>
+        </div>
+      </div>
+    </div>
+    <!-- navbar -->
+    <div class="row">
+      <div class="col-sm-9 col-md-9 col-lg-9">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav text-capitalize fw-bold nav-item">
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">treatments</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">about </a>
+                </li>
+               
+                <li class="nav-item">
+                  <a class="nav-link" href="#">blog</a>
+                </li>
+                 <li class="nav-item">
+                  <a class="nav-link" href="#">contact</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <div class="col-sm-2 col-md-2 col-lg-2">
+        <div class="d-flex icon-size">
+          <img src="images/layer36.png" class="img-fluid play-store-img">
+          <img src="images/layer37.png" class="img-fluid play-store-img">
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- form section and video section -->
+</body>
+<style type="text/css">
+  ul{
+    width:50px;
+  }
+</style>
+</html>
+
+    <!-- F&V -->
+
+    <section class="container-fluid ">
+    <div class="row">
+      <div class="col-sm-4 col-md-4 col-lg-4 col-12" style="background-image: url('images/BlueBackground.png');">
+        <form class="frm-size" id="regForm" action="/action_page.php">
+  <h1 class="text-center p-5 ">Are You Patient</h1>
+  <!-- One "tab" for each step in the form: -->
+  <div class="tab"><div class="row">
+                                        <div class="col-lg-12">
+                                            <div class="mb-1" >
+                                                <label class="form-label  margin_bootom_0">Patient Name <span class="text-danger">*</span></label>
+                                                <input name="name" id="name" type="text" class="form-control transparent c-p-5" placeholder="Name">
+                                                <span class="rating-error" id="name-errors"></span>
+                                            </div>
+                                        </div>
+                                        <!--end col-->
+
+                                        <div class="col-lg-6">
+                                            <div class="mb-1">
+                                                <label class="form-label  margin_bootom_0">Your Email <span class="text-danger">*</span></label>
+                                                <input name="email" id="email" type="email" class="form-control transparent c-p-5" placeholder="Email">
+                                            </div> 
+                                        </div><!--end col-->
+
+                                        <div class="col-lg-6">
+                                            <div class="mb-1">
+                                                <label class="form-label margin_bootom_0 ">Your Phone <span class="text-danger">*</span></label>
+                                                <input name="phone" id="phone" type="tel" class="form-control transparent c-p-5" placeholder="Phone">
+                                            </div> 
+                                        </div><!--end col-->
+
+                                        <div class="col-lg-6">
+                                            <div class="mb-1">
+                                                <label class="form-label margin_bootom_0 ">Address <span class="text-danger">*</span></label>
+                                                <input name="address" id="address" type="text" class="form-control transparent c-p-5" placeholder="Address">
+                                            </div> 
+                                        </div><!--end col-->
+                                        <div class="col-lg-6">
+                                            <div class="mb-1">
+                                                <label class="form-label margin_bootom_0 ">Unit Number</label>
+                                                <input name="unit_no" id="unit_no" type="text" class="form-control transparent c-p-5" placeholder="UnitNo">
+                                            </div> 
+                                        </div>
+</div>
+  </div>
+  <div class="tab">
+    <div class="row">
+
+                                        <div class="col-lg-6">
+                                            <div class="mb-1">
+                                                <label class="form-label margin_bootom_0 ">City <span class="text-danger">*</span></label>
+                                                <input name="city" id="city" type="tel" class="form-control transparent c-p-5" placeholder="City">
+                                            </div> 
+                                        </div>
+                                        
+    </div>
+  </div>
+  <div class="tab">
+    <div class="row">
+          <div class="col-lg-12">
+                                            <div class="mb-1">
+                                                <label class="form-label margin_bootom_0">Do you have dental insurance? </label>
+                                                <select class="col-lg-8 form-control transparent c-p-5"  name='insurance' id='insurance'  >
+                                                    <option value="">Please select</option>
+                                                    <option value="Yes - I have Insuracne">Yes - I have insurance </option>
+                                                    <option value="No - I don't have insurance">No - I don't have insurance</option>
+                                                </select>
+                                                <p style="font-size:10px;">Why do we ask? We want connect you with a dentist who accepts your plan!</p>
+                                              </div> 
+                                        </div>
+
+                                        <div class="col-lg-12">
+                                        
+                                            <div class="mb-1">
+                                                <label class="form-label margin_bootom_0">Please identify the type of procedure(s) you are interested in. (if unsure, leave blank) </label>
+
+                                                <div class="row" style="margin-left: 0px;font-size:12px;">
+                                                    <div class="form-check col-lg-4">
+                                                        <input name='interested_procedure[]' class="form-check-input" type="checkbox" value="Root Canal" id="flexCheckDefault1">
+                                                        <label class="form-check-label" for="flexCheckDefault">Root Canal</label>
+                                                    </div>
+                                                    <div class="form-check col-lg-4">
+                                                        <input name='interested_procedure[]' class="form-check-input" type="checkbox" value="Teeth Whitening" id="flexCheckChecked2" >
+                                                        <label class="form-check-label" for="flexCheckChecked">Teeth Whitening</label>
+                                                    </div>  
+                                                    <div class="form-check col-lg-4">
+                                                        <input name='interested_procedure[]' class="form-check-input" type="checkbox" value="Snap on Dentures" id="flexCheckChecked4" >
+                                                        <label class="form-check-label" for="flexCheckChecked">Snap on Dentures</label>
+                                                    </div>
+                                                                                             
+                                                    
+                                                    
+                                                   
+                                                    <div class="form-check col-lg-4">
+                                                        <input name='interested_procedure[]' class="form-check-input" type="checkbox" value="Bridge/Crown" id="flexCheckChecked5" >
+                                                        <label class="form-check-label" for="flexCheckChecked">Bridge/Crown</label>
+                                                    </div>
+                                                    <div class="form-check col-lg-4">
+                                                        <input name='interested_procedure[]' class="form-check-input" type="checkbox" value="Implants(s)" id="flexCheckChecked6" >
+                                                        <label class="form-check-label" for="flexCheckChecked"> Implants(s)</label>
+                                                    </div>
+                                                    
+                                                   
+                                                    <div class="form-check col-lg-4">
+                                                        <input name='interested_procedure[]' class="form-check-input" type="checkbox" value="Braces (Metal)" id="flexCheckChecked9" >
+                                                        <label class="form-check-label" for="flexCheckChecked">Braces (Metal) </label>
+                                                    </div>
+                                                    
+                                                    <div class="form-check col-lg-4">
+                                                        <input name='interested_procedure[]' class="form-check-input" type="checkbox" value="Dental Extractions" id="flexCheckChecked11" >
+                                                        <label class="form-check-label" for="flexCheckChecked">Dental Extractions</label>
+                                                    </div>
+                                                  
+                                                    <div class="form-check col-lg-4">
+                                                        <input name='interested_procedure[]' class="form-check-input" type="checkbox" value="Veneers" id="flexCheckChecked10" >
+                                                        <label class="form-check-label" for="flexCheckChecked">Veneers </label>
+                                                    </div> 
+                                                    
+                                                    <div class="form-check col-lg-4">
+                                                        <input name='interested_procedure[]' class="form-check-input" type="checkbox" value="Other" id="flexCheckChecked12" >
+                                                        <label class="form-check-label" for="flexCheckChecked">Other </label>
+                                                    </div>
+                                                    
+                                                    <div class="form-check col-lg-5">
+                                                        <input name='interested_procedure[]' class="form-check-input" type="checkbox" value="Removable Dentures" id="flexCheckChecked8" >
+                                                        <label class="form-check-label" for="flexCheckChecked">Removable Dentures</label>
+                                                    </div>
+                                                    <div class="form-check col-lg-6">
+                                                    <input name='interested_procedure[]' class="form-check-input" type="checkbox" value="Clear Aligners (Invisalign)" id="flexCheckChecked3" >
+                                                        <label class="form-check-label" for="flexCheckChecked">Clear Aligners (Invisalign)</label>
+                                                    </div>
+                                                    
+                                                    
+                                               
+                                                </div>
+                                            </div> 
+                                        </div>
+
+
+                                        <div class="col-lg-12">
+                                            <div class="mb-1">
+                                                <label class="form-label margin_bootom_0">Are you presently employed? </label>
+                                                <select  class="col-lg-8 form-control transparent c-p-5"  name='presently_employed' id='presently_employed'  >
+                                                    <option value="">Please select</option>
+                                                    <option value="Employed">Employed</option>                                                    
+                                                    <option value="Retired / Senior">Retired / Senior</option>
+                                                    <option value="Unemployed / Dependent">Unemployed / Dependent</option>
+                                                    <option value="Student">Student</option>
+                                                </select>
+                                              </div> 
+                                    </div>
+
+    </div>
+  </div>
+  <div class="tab">
+    <div class="row">
+      <div class="col-lg-12">
+                                            <div class="mb-1">
+                                                <label class="form-label margin_bootom_0">How did you hear about us? </label>
+                                                <select  class="col-lg-8 form-control transparent c-p-5"  name='hear_about_us' id='hear_about_us'  >
+                                                    <option value="">Please select</option>
+                                                    <option value="Google">Google</option>                                                    
+                                                    <option value="Social Media">Social Media</option>
+                                                    <option value="Radio">Radio</option>
+                                                    <option value="Referral">Referral</option>
+                                                    <option value="Others">Others</option>
+                                                </select>
+                                              </div> 
+                                        </div>
+
+                                        </br>
+                                        <div class="col-12" style="margin-top:10px;">
+                                        <p style="font-size:11px;"><input value="Yes" type="checkbox" name="send_email_permission" id="send_email_permission"> 
+                                        By checking this box you agree with the <a  style="color:#fff;font-weight:bold;text-decoration:underline!important;font-size:13px;" target="_blank" href="https://www.dentalgram.ca/Terms"><span>Terms and Conditions</span></a> and consent to the 
+                                        secure collection, use and disclosure of your personal information as described in our 
+                                        <a style="color:#fff;font-weight:bold;text-decoration:underline!important;font-size:13px;" target="_blank" href="https://www.dentalgram.ca/Privacy"><span>Privacy Policy</span></a>  
+                                           
+                                        </div>   
+                                        <!--<div class="col-12">
+                                            <p><input value="Yes" type="checkbox"  name="send_email_permission2" id="send_email_permission2"><span>&nbsp;Send emails for further communication</span> </p>
+                                        </div>  -->
+                                        <div class="col-lg-12 ">
+                                            <div class="d-grid float-lg-right">
+                                                <button type="submit" id="query-submit" onmouseover="return initMap();" class="btn btn-primary w-100 " style="color:rgb(90,189,231);font-weight: bold; opacity: 1;">Submit Your Query</button>
+                                            </div>
+                                        </div><!--end col-->
+    </div>
+  </div>
+  <div style="overflow:auto;">
+    <div style="float:right;">
+      <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+      <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+    </div>
+  </div>
+  <!-- Circles which indicates the steps of the form: -->
+  <!-- <div style="text-align:center;margin-top:40px;">
+    <span class="step"></span>
+    <span class="step"></span>
+    <span class="step"></span>
+    <span class="step"></span>
+  </div> -->
+</form>
+ </div>  
+      <div class="col-sm-8 col-md-8 col-lg-8 col-8">
+        <video class="video-fluid h-100 w-100 video" autoplay loop controls muted>
+                    <source src="video/video-bg.mp4" type="video/mp4" />
+                  </video>
+      </div>    
+    </div>
+</section>
+<style type="text/css">
+  /* Mark input boxes that gets an error on validation: */
+    input.invalid {
+      background-color: #ffdddd;
+    }
+
+    /* Hide all steps by default: */
+    .tab {
+      display: none;
+    }
+
+    button {
+      background-color: #04AA6D;
+      color: #ffffff;
+      border: none;
+      padding: 10px 20px;
+      font-size: 17px;
+      font-family: Raleway;
+      cursor: pointer;
+    }
+
+    button:hover {
+      opacity: 0.8;
+    }
+
+    #prevBtn {
+      background-color: #bbbbbb;
+    }
+    #regForm{
+      height:29rem;
+    }
+    /* Make circles that indicate the steps of the form: */
+    .step {
+      height: 15px;
+      width: 15px;
+      margin: 0 2px;
+      background-color: #bbbbbb;
+      border: none;  
+      border-radius: 50%;
+      display: inline-block;
+      opacity: 0.5;
+    }
+
+    .step.active {
+      opacity: 1;
+    }
+
+    /* Mark the steps that are finished and valid: */
+    .step.finish {
+      background-color: #04AA6D;
+    }
+</style>
+<script>
+var currentTab = 0; // Current tab is set to be the first tab (0)
+showTab(currentTab); // Display the current tab
+
+function showTab(n) {
+  // This function will display the specified tab of the form...
+  var x = document.getElementsByClassName("tab");
+  x[n].style.display = "block";
+  //... and fix the Previous/Next buttons:
+  if (n == 0) {
+    document.getElementById("prevBtn").style.display = "none";
+  } else {
+    document.getElementById("prevBtn").style.display = "inline";
+  }
+  if (n == (x.length - 1)) {
+    document.getElementById("nextBtn").innerHTML = "Submit";
+  } else {
+    document.getElementById("nextBtn").innerHTML = "Next";
+  }
+  //... and run a function that will display the correct step indicator:
+  fixStepIndicator(n)
+}
+
+function nextPrev(n) {
+  // This function will figure out which tab to display
+  var x = document.getElementsByClassName("tab");
+  // Exit the function if any field in the current tab is invalid:
+  if (n == 1 && !validateForm()) return false;
+  // Hide the current tab:
+  x[currentTab].style.display = "none";
+  // Increase or decrease the current tab by 1:
+  currentTab = currentTab + n;
+  // if you have reached the end of the form...
+  if (currentTab >= x.length) {
+    // ... the form gets submitted:
+    document.getElementById("regForm").submit();
+    return false;
+  }
+  // Otherwise, display the correct tab:
+  showTab(currentTab);
+}
+
+function validateForm() {
+  // This function deals with validation of the form fields
+  var x, y, i, valid = true;
+  x = document.getElementsByClassName("tab");
+  y = x[currentTab].getElementsByTagName("input");
+  // A loop that checks every input field in the current tab:
+  for (i = 0; i < y.length; i++) {
+    // If a field is empty...
+    if (y[i].value == "") {
+      // add an "invalid" class to the field:
+      y[i].className += " invalid";
+      // and set the current valid status to false
+      valid = false;
+    }
+  }
+  // If the valid status is true, mark the step as finished and valid:
+  if (valid) {
+    document.getElementsByClassName("step")[currentTab].className += " finish";
+  }
+  return valid; // return the valid status
+}
+
+function fixStepIndicator(n) {
+  // This function removes the "active" class of all steps...
+  var i, x = document.getElementsByClassName("step");
+  for (i = 0; i < x.length; i++) {
+    x[i].className = x[i].className.replace(" active", "");
+  }
+  //... and adds the "active" class on the current step:
+  x[n].className += " active";
+}
+</script>
+
+        
+              <!-- Service -->
+
+
+<section class="container-fluid" style="margin-top:5.5rem">
+  <div class="row">
+    <div class="col-sm-6 col-md-6 col-lg-6">
+      <img src="images/Dentist.png" class="img-fluid" align="images">
+    </div>
+    <div class="col-sm-6 col-md-6 col-lg-6">
+      <div>
+        <h1 class="text-capitalize fw-bold font-s ">DentalGram</h1>
+        <p class="mb-5"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        ></p>
+      </div>
+      <div class="row" class="ser">
+        <div class="col-sm-6 col-md-6 col-lg-6">
+          <div class="d-flex mob-view " style=" align-items: center;
+          ">
+            <img src="images/Icon01_1.png" class=" img-size p-2 img-fluid">
+            <p class="text-capitalize px-3 fw-bold">affortable</p>
+          </div>
+
+          <div class="d-flex mob-view" style="align-items: center;
+          ">
+            <img src="images/Icon02_1.png" class=" img-size p-2 img-fluid">
+            <p class="text-capitalize px-3 fw-bold">Compassionate</p>
+          </div>
+
+          <div class="d-flex mob-view" style="align-items: center;
+          ">
+            <img src="images/Icon03_1.png" class=" img-size p-2 img-fluid">
+            <p class="text-capitalize px-3 fw-bold">Comprehensive</p>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-6 col-lg-6">
+            <div class="d-flex mob-view" style="align-items: center;
+          ">
+            <img src="images/Icon04_1.png" class=" img-size p-2 img-fluid">
+            <p class="text-capitalize px-3 fw-bold">Dedicatet</p>
+          </div>
+
+          <div class="d-flex mob-view" style="align-items: center;
+          ">
+            <img src="images/Icon05_0.png" class="img-size p-2 img-fluid">
+            <p class="text-capitalize px-3 fw-bold">Exprienced</p>
+          </div>
+
+          <div class="d-flex mob-view" style="align-items: center;
+          ">
+            <img src="images/Icon06_0.png" class="img-size p-2 img-fluid">
+            <p class="text-capitalize px-3 fw-bold">Effective</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+      
+
+          <!-- ChooseDental -->
+
+
+      <section class="  container-fluid mt-5" style="background:url('images/BlueDesign.png') ; background-size: 100% 100%;">
+  <h1 class="text-capitalize text-center px-3 pt-5 fw-bold">why choose dentalGram?</h1>
+  <div class="row justify-content-center mt-5">
+    <div class="col-sm-4 col-md-4 col-lg-4">
+      <fieldset>
+        <legend><img src="images/Icon01_0.png" class="card-icon" ></legend>
+        <div class="card m-4">
+          <div class="card-title mt-4" style="position: relative;">
+            <p class="text-capitalize choose-form-color fw-bold mb-0">qualified dentiest</p>
+            <p class="fw-bold">We have a team of  qualified dentist
+            and staff who are abelable on the site.
+            we will find the best dentist for you. 
+            </p>
+          </div>
+        </div>
+      </fieldset>
+    </div>  
+    <div class="col-sm-4 col-md-4 col-lg-4">
+      <fieldset>
+          <legend class="" style=""><img src="images/Icon02_0.png" class="card-icon"></legend>
+          <div class="card m-4">
+            <div class="card-title mt-4" style="position: relative;">
+              <p class="text-capitalize choose-form-color fw-bold mb-0">emergancy priorty</p>
+              <p class="fw-bold">Our dental office know what are dental
+                emergency is and give priority
+                treatment to such cases
+              </p>
+            </div>
+          </div>
+        </fieldset>
+    </div>    
+  </div>
+  <!-- second row -->
+  <div class="row justify-content-end mt-5">
+    <div class="col-sm-4 col-md-4 col-lg-4 mb-5">
+      <fieldset>
+        <legend><img src="images/Icon03_0.png" class="card-icon" ></legend>
+        <div class="card m-4">
+          <div class="card-title mt-4" style="position: relative;">
+            <p class="text-capitalize choose-form-color fw-bold mb-0">centerally Located</p>
+            <p class="fw-bold">we will contact best dental
+              clinic located at reasy to acces
+              located near you
+            </p>
+          </div>
+        </div>
+      </fieldset>
+    </div>  
+    <div class="col-sm-4 col-md-4 col-lg-4">
+      <fieldset>
+          <legend class="" style=""><img src="images/Icon04_0.png" class="card-icon"></legend>
+          <div class="card m-4">
+            <div class="card-title mt-4" style="position: relative;">
+              <p class="text-capitalize choose-form-color fw-bold mb-0">Kids Friendly</p>
+              <p class="fw-bold">We take greate care to make dental
+                visits comfortable for you little ones.
+              </p>
+            </div>
+          </div>
+        </fieldset>
+    </div>    
+  </div>
+</section>
+<style type="text/css">
+  .card{
+    border-radius: 20px;
+    border: 3px solid #0a99ec;
+    padding: 10px;
+  }
+  .choose-form-color{
+    color: #0a99ec;
+    font-size: 20px;
+  }
+  .card-icon{
+    margin-top:-15px;margin-left: 50px; position:absolute; z-index: 1;width: 75px;
+  }
+</style>
+
+                     <!-- <--CardList-->
+
+
+ <section class="container-fluid" style="background:url('images/BackGroundImage.png');background-size: 100% 100%;">
+  <!-- titttle and heading -->
+      <div class="text-capitalize text-center py-5">
+        <h1>dentalGram</h1>
+        <p>
+          ours state of arts dental gram offices following dental treatment.
+        </p>
+      </div>
+      <div class="row pb-5" >
+
+        <!-- start column -->
+        <div class="col-sm-6 col-md-6 col-lg-6 ">
+          <!-- start row -->
+          <div class="row justify-content-center">
+            <!-- start column -->
+            <div class="col-sm-8 col-md-8 col-lg-8">
+              <div class="w-100 mb-3">
+                <div class="d-flex card-bg">
+                  <img src="images/Icon01.png" class="p-2 img-fluid icon">
+                  <p class="text-capitalize px-3 fw-bold text-light fs-5">eemrgancy dentistry</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row justify-content-center">
+            <!-- start column -->
+            <div class="col-sm-8 col-md-8 col-lg-8">
+              <div class="w-100 mb-3">
+                <div class="d-flex card-bg-even">
+                  <img src="images/Icon02.png" class="p-2 img-fluid icon-even">
+                  <p class="text-capitalize px-3 fw-bold text-info fs-5">invisalign clear braces</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row justify-content-center">
+            <!-- start column -->
+            <div class="col-sm-8 col-md-8 col-lg-8">
+              <div class="w-100 mb-3">
+                <div class="d-flex card-bg">
+                  <img src="images/Icon03.png" class="p-2 img-fluid icon" style="">
+                  <p class="text-capitalize px-3 fw-bold text-light fs-5">teeth-whitening</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row justify-content-center">
+            <!-- start column -->
+            <div class="col-sm-8 col-md-8 col-lg-8">
+              <div class="w-100 mb-3">
+                <div class="d-flex card-bg-even">
+                  <img src="images/Icon08.png" class="p-2 img-fluid icon-even" style="">
+                  <p class="text-capitalize px-3 fw-bold text-info fs-5">dental extrations</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row justify-content-center">
+            <!-- start column -->
+            <div class="col-sm-8 col-md-8 col-lg-8">
+              <div class="w-100 mb-3">
+                <div class="d-flex card-bg">
+                  <img src="images/Icon07.png" class="p-2 img-fluid icon" style="">
+                  <p class="text-capitalize px-3 fw-bold text-light fs-5">sedation dentistry</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row justify-content-center">
+            <!-- start column -->
+            <div class="col-sm-8 col-md-8 col-lg-8">
+              <div class="w-100 mb-3">
+                <div class="d-flex card-bg-even">
+                  <img src="images/Icon08.png" class="p-2 img-fluid icon-even" style="">
+                  <p class="text-capitalize px-3 fw-bold text-info fs-5">metal free crowns</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- start col-2 -->
+        <div class="col-sm-6 col-md-6 col-lg-6 ">
+          <!-- start row -->
+          <div class="row justify-content-center">
+            <!-- start column -->
+            <div class="col-sm-8 col-md-8 col-lg-8">
+              <div class="w-100 mb-3">
+                <div class="d-flex card-bg-even">
+                  <img src="images/Icon09.png" class="p-2 img-fluid icon-even" style="">
+                  <p class="text-capitalize px-3 fw-bold text-info fs-5">dental implants</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row justify-content-center">
+            <!-- start column -->
+            <div class="col-sm-8 col-md-8 col-lg-8">
+              <div class="w-100 mb-3">
+                <div class="d-flex card-bg">
+                  <img src="images/Icon10.png" class="p-2 img-fluid icon" style="">
+                  <p class="text-capitalize px-3 fw-bold text-light fs-5">preventative dentistry</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row justify-content-center">
+            <!-- start column -->
+            <div class="col-sm-8 col-md-8 col-lg-8">
+              <div class="w-100 mb-3">
+                <div class="d-flex card-bg-even">
+                  <img src="images/Icon11.png" class="p-2 img-fluid icon-even" style="">
+                  <p class="text-capitalize px-3 fw-bold text-info fs-5">crown-&-bridge</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row justify-content-center">
+              <!-- start column -->
+            <div class="col-sm-8 col-md-8 col-lg-8">
+              <div class="w-100 mb-3">
+                <div class="d-flex card-bg">
+                  <img src="images/Icon12.png" class="p-2 img-fluid icon" style="">
+                  <p class="text-capitalize px-3 fw-bold text-light fs-5">denturess-technolgy</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row justify-content-center">
+            <!-- start column -->
+            <div class="col-sm-8 col-md-8 col-lg-8">
+              <div class="w-100 mb-3">
+                <div class="d-flex card-bg-even">
+                  <img src="images/Icon13.png" class="p-2 img-fluid icon-even" style="">
+                  <p class="text-capitalize px-3 fw-bold text-info fs-5">advance-technology</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row justify-content-center">
+            <!-- start column -->
+            <div class="col-sm-8 col-md-8 col-lg-8">
+              <div class="w-100 mb-3">
+                <div class="d-flex card-bg">
+                  <img src="images/Icon14.png" class="p-2 img-fluid icon" style="">
+                  <p class="text-capitalize px-3 fw-bold text-light fs-5">restorative dentistry</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- end row -->
+      </div>
+</section>
+<style type="text/css">
+  .card-bg{
+    align-items: center; background-color: #7BEFEE; border-radius: 30px; background-repeat: no-repeat; background-size:100% 100%; padding: 10px;
+  }
+  .card-bg-even{
+    align-items: center; background-color: #fff;border-radius: 30px; background-repeat: no-repeat; background-size:100% 100%; padding: 10px;
+  }
+  .icon{
+    background-image: url('images/RoundedRectangle0010.png'); background-repeat: no-repeat; background-size:100% 100%; width:69px;height: 69px;
+  }
+  .icon-even{
+    background-image: url('images/Ellipse01.png'); background-repeat: no-repeat; background-size:100% 100%; width:69px;height: 69px;
+  }
+</style>
+
+
+      <!-- <--Book An Appot--->
+      
+
+      <section class="container-fluid" style=" background-size: 100% 100%; background-image: url('images/DentistEmergency.png');">
+  <div class="row">
+    <div class="col-sm-7 col-md-7 col-lg-7 mt-5">
+      <div class="mt-3 text-center p-2 fw-bold"  style=" align-items:center;">
+        <div class="mb-5">
+          <h1 class="py-3" style="color: #0a99ec;">Emengency?</h1>
+          <p class="bg">we fondly welcome new patients & dental<br> emergancies.</p>
+          <button style="border-radius: 10px;" class="mb-5">Book an Appoinment</button> 
+        </div>
+      </div>
+      
+    </div>
+    <!-- <div class="col-sm-5 col-md-5 col-lg-5"></div> -->
+  </div>
+</section>   
+
+      <section class="bg-dark">
+  <div class="container">
+    <div class="row container text-light ">
+      <div class="col-sm-7 col-md-7 col-lg-7">
+        <div class="mt-5">
+          <img src="images/MainLogo.png">
+          <div class="mob-v">
+            <img src="images/Facebook.png" class="m-1">
+            <img src="images/Twitter.png" class="m-1">
+            <img src="images/Youtube.png" class="m-1">
+            <img src="images/Instagram.png" class="m-1">
+          </div>
+          <p class="text-capitalize pt-3">dentalgram provides yours digital solutions for dentals offices and dental treatment</p>
+          <div class="d-block">
+            <div class="d-flex ">
+              <img src="images/Tel.png" style="width: 20px; height: 20px; padding: 3px;"><p>+1-783738-7363</p>
+
+            </div>            
+            <div class="d-flex">
+              <img src="images/Email.png" style="width: 20px; height: 20px; padding: 3px;"><p>info@dentalgram.ca</p>
+            </div>
+          </div>
+          <div class="d-flex m-0">
+            
+          </div>
+          <div class="d-flex">
+            <p class="bg-light text-info text-center" style="border-radius:20px; padding: 3px; width: 200px;">contact us</p>
+          </div>
+        </div>
+      </div>  
+
+      <!-- start col -->
+      <div class="col-sm-5 col-md-5 col-lg-5 mt-5">
+        <div class="mt-5 py-4 m-5" style="display: grid;place-items:center;background: url('images/RoundedRectangle13.png'); background-repeat: no-repeat; background-size: 100% 100%; ">
+          <h3 class="text-center text-capitalize p-4">download our app</h3>
+          <img src="images/Layer17.png" style="width:200px">
+        </div>
+      </div>
+    </div>
+    <!-- copy right -->
+    
+  </div>
+  <div class="bg-info d-flex justify-content-between p-2 px-5">
+      <div class="p-2 fw-bold">
+        <p>2022 #dentalGram.Inc. All Rights reserved</p>
+      </div>
+      <div class="p-2 fw-bold">
+        <p>terms & conditions | private policy | about us</p>
+      </div>
+    </div>
+</section>
+
+      <!-- include 'nav.php';
+      include 'Form&Video.php';
+      include 'Services.php';
+      include 'ChooseDental.php';
+      include 'CardList.php';
+      include 'BookAppoinment.php';
+      include 'Footer.php'
+   -->
+
+    <!-- Optional JavaScript; choose one of the two! -->
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+  </body>
+</html>
